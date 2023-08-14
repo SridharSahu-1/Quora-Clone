@@ -1,0 +1,31 @@
+.ansCard{
+    padding: 16px 16px 0;
+    border: 1px solid var(--light-gray);
+    margin: 5px;
+}
+.ansCard__question{
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: var(--color-black);
+}
+.ansCard__question:hover{
+    text-decoration: underline;
+}
+.ansCard__ansCount{
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 13px;
+    margin: 8px 0;
+}
+.ansCard__btnGroup{
+padding: 4px 0;
+}
+.ansCard__btnGroup__btn{
+    padding: 0 12px;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}

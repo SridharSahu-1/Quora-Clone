@@ -1,0 +1,35 @@
+.Qns{
+    min-height: 470px;
+    width: 100%;
+}
+.Qns img{
+    width: 25px;
+    height: 25px;
+}
+.Qns__heading{
+    padding: 20px;
+    padding-bottom: 0;
+    color: var(--color-primary);
+}
+.Qns__list{
+    padding: 5px 37px 15px;
+    color: var(--color-primary);
+}
+.Qns__list__item{
+    margin: 5px;
+}
+.Qns__input{
+    width: calc(100% - 10px);
+    min-height: 26px;
+    resize: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    padding: 10px;
+    margin: 5px;
+    border-bottom: 1px solid var(--light-gray);
+}
+.Qns__input:hover{
+    border-bottom-color: var(--color-primary);
+}

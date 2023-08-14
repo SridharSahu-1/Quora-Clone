@@ -1,0 +1,19 @@
+.questions{
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    flex-direction: column;
+}
+.questions .ansCard__ansCount{
+    display: none;
+}
+.questions .ansCard__btnGroup{
+    padding: 25px 0;
+}
+.questions .ansCard__btnGroup__btn{
+    padding: 0 12px;
+    height: 38px;
+}
+.questions .ansCard__question{
+    font-size: 21px;
+}

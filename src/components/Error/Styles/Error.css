@@ -1,0 +1,29 @@
+.error__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.error__container__heading{
+    font-size: 1.25rem;
+    margin: 0 0 4px;
+}
+.error__container__text{
+    font-size: 14px;
+    color: var(--color-text);
+    padding: 5px 0;
+}
+.error__container__links{
+    padding: 20px 0;
+}
+.error__container__links *{
+    text-decoration: none;
+    color: var(--color-primary);
+    margin: 0 5px;
+    cursor: pointer;
+}
+.error__container__links *:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,21 @@
+.search-container{
+    display: flex;
+    justify-content: center;
+}
+.link-text{
+    text-decoration: none;
+    color: black;
+}
+.link-text li{
+    margin: 10px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+.list{
+    padding: 15px;
+    list-style: none;
+    overflow-y: scroll;
+    display: none;
+}
+.list:has(li){
+    display: block;
+}

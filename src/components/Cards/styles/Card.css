@@ -1,0 +1,147 @@
+.card {
+    position: relative;
+    margin: 20px 0;
+    background-color: var(--color-white);
+    padding: 10px;
+    --margin: 7px;
+    border: 1px solid var(--light-gray);
+    --line-camp:3;
+  }
+  .details-card {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  
+  .card .img,.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  .card .user-name {
+    display: inline;
+    margin-left: 20px;
+    text-transform: capitalize;
+  }
+  .thumbnails{
+    width: 100%;
+  }
+  .card .header-3 {
+    margin: var(--margin);
+  }
+  .card .para {
+    margin: 20px !important;
+    color: var(--dark-gray);
+  }
+  .text-ellipsis{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-camp);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .card .asks {
+    font-size: 1.125rem;
+    color: var(--dark-gray);
+  }
+  .card .question-input {
+    display: block;
+    width: 100%;
+    height: 1.6rem;
+  }
+  .card .matching-questions {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+  }
+  .card .matching-questions li {
+    margin: 5px 0;
+    padding: 5px 0;
+    font-weight: 600;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  .card .btn-group {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .card .btn-group .btn {
+    padding: 0px 20px;
+    height: 38px;
+    min-width: 38px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .card .btn-group .btn:last-child {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 38px;
+  }
+  .card .btn-group .btn:last-child:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .ans-user-name {
+    font-size: 1rem;
+  }
+  .answeredBy {
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  .underline-listItem{
+    margin: 10px;
+    padding: 5px;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  .answer-btn{
+    margin: 5px 20px ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    gap: 5px;
+  }
+  .voting-icons{
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+  }
+  .voting-icons svg{
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .voting-icons svg:first-child .icon_svg-stroke{
+    stroke: var(--color-primary);
+  }
+  .voting-icons span{
+    margin-left: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  /* @media screen and (max-width: 450px) {
+    .question {
+      margin: 10px;
+      padding: 10px;
+    }
+    .card h3 {
+      font-size: 1.125rem;
+    }
+    .card h2 {
+      font-size: 1.35rem;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .card {
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+   */

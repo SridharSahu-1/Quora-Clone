@@ -1,0 +1,204 @@
+.login{
+    position: relative;
+    background-image: url(https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.home_page_bg_desktop.png-26-4770753d59b970e1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box{
+    background-color: var(--color-white);
+    max-width: 700px;
+    z-index: 1;
+    border-radius: 5px;
+}
+.upper-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.login .logo_fill{
+    fill: var(--red);
+}
+.login .sub-heading{
+    text-align: center;
+    font-size: 15px;
+
+}
+.middle-section{
+    display: flex;
+}
+.left,.right{
+    flex: 1;
+    padding: 0 25px;
+}
+.right{
+    border-left: 1px solid var(--light-gray);
+}
+.auth-btn{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--light-gray);
+    margin: 10px 5px;
+    padding: 8px;
+    gap: 5px;
+    cursor: pointer;
+}
+.auth-btn svg{
+    width: 28px;
+    height: 28px;
+}
+.sign-up-btn{
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px 0;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    --line-camp:1;
+}
+.middle-section label{
+    display: block;
+    color: var(--color-black);
+    font-weight: 600;
+    margin: 20px 5px 2px 5px;
+    font-size: 15px;
+}
+.middle-section input{
+    display: block;
+    border: 1px solid var(--light-gray);
+    outline: none;
+    padding: 13px;
+    margin: 8px 5px;
+    width: calc(100% - 10px);
+}
+.middle-section input:focus{
+    border-color: var(--color-primary);
+}
+.middle-section:has(.error) .loginFrom input{
+    border-color: var(--red);
+}
+.error,.hide-error{
+    color: var(--red);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    gap: 3px;
+}
+.hide-error{
+    visibility: hidden;
+}
+.error svg{
+    width: 20px;
+    height: 20px;
+}
+.error .icon_svg-stroke{
+    stroke: var(--red);
+}
+.forget-pass{
+    font-size: 13px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+.forget-pass:hover{
+    text-decoration: underline;
+}
+.middle-section .heading{
+    margin: 5px;
+    font-size: 15px;
+    color: var(--color-black);
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 15px;
+    margin-bottom: 8px;
+}
+.middle-section .btn{
+    float: right;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin: 10px 5px;
+}
+.middle-section .tc{
+    font-size: 13px;
+    margin: 5px;
+    margin-bottom: 25px;
+}
+.link-underline{
+    text-decoration: none;
+    color: var(--color-link);
+}
+.link-underline:hover{
+    text-decoration: underline;
+}
+
+.bottom-section .lowerPanel{
+    gap: 5px;
+    justify-content: center;
+    max-width: initial;
+    font-size: 13px;
+    margin: 15px 0;
+}
+@media screen and (max-width:1050px) {
+    .middle-section .right{
+        display: none;
+    }
+    .login-box{
+        background-color: transparent;
+        color: var(--color-white);
+    }
+    .login{
+        background-image: url(https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.noise2.png-26-232b425ba48b8dd3.png);
+        background-repeat: repeat;
+        background-position: initial;
+        background-size: auto;
+        
+    }
+    .login::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 45vh;
+        background-size: cover;
+        background-position: center;
+        background-image: url(https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_home_mobile_top.png-26-79932f69f508b470.png);
+    }
+    .login::after{
+        content: "";
+        position: absolute;
+        top: 85vh;
+        height: 15vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-image: url(https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.logged_out_mobile_bottom.png-26-2c5c167962e4951d.png);
+    }
+    .sign-up-btn{
+        display: inline !important;
+        padding: 10px 30px;
+        border-radius: 15px;
+        margin: 10px;
+        width: calc(50% - 20px);
+        background-color: rgba(255, 255, 255, 0.3);
+        border: none;
+        outline: none;
+        color: var(--color-white);
+    }
+    .auth-btn{
+        background-color: var(--color-white);
+        color: var(--color-black);
+    }
+    .bottom-section .lower-panel a{
+        color: var(--color-white);
+    }
+}

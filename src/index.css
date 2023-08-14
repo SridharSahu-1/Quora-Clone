@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("react-tooltip/dist/react-tooltip.css");
+@import url("react-toastify/dist/ReactToastify.css");
+:root {
+    --red: rgb(185, 43, 39);
+    --light-gray: #dadada;
+    --dark-gray:#454545;
+    --color-primary: #2e69ff;
+    --color-link : #0000b5;
+    --color-white:#fff;
+    --icon-width:31px;
+    --color-text:#636466;
+    --color-black: #282829;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #7a7a7a #ffffff;
+}
+
+*::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+    /*for horizontal scroll bar */
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #7a7a7a;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+.d-none{
+    display: none;
+}
+.d-block{
+    display: block;
+}
+button[disabled]{
+    opacity: 0.6;
+    cursor: default !important;
+}

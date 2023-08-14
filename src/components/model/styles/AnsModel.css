@@ -1,0 +1,112 @@
+.main:has(.ansModel){
+    height: 100vh;
+    overflow: hidden;
+}
+.ansModel{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.ansModel__container{
+    position: relative;
+    width: 730px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow: hidden;
+    min-height: 400px;
+}
+.ansModel__container__btn,.container__btnGroup__btn{
+    padding: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.ansModel__container__profile{
+    display: flex;
+    align-items: center;
+}
+.container__profile__img{
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    object-fit: contain;
+    margin: 14px;
+}
+.container__profile__name{
+    font-weight: 800;
+    font-size: 13px;
+}
+.ansModel__container__question{
+    padding: 5px 16px 16px;
+}
+.ansModel__container__input{
+    min-height: 260px;
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 16px;
+    border-bottom: 1px solid var(--light-gray);
+}
+.ansModel__container__input::placeholder{
+    font-size: 16px;
+}
+.ansModel__container__btnGroup{
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+}
+.container__btnGroup__btn{
+    padding: 2px;
+    margin: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: border 0.3s ease-in-out;
+}
+.container__btnGroup__btn:hover{
+    border-color: var(--color-primary);
+}
+.container__btnGroup__closeBtn{
+    cursor: pointer;
+    margin-left: 5px;
+    display: inline-flex;
+}
+.container__btnGroup__postBtn{
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0 20px;
+    margin: 10px;
+    height: 38px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+@media screen and (max-width:1050px) {
+    .ansModel__container{
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .ansModel__container__input{
+        order: 4;
+        flex: 1;
+    }
+    .container__btnGroup__postBtn{
+        top: 0;
+    }
+}

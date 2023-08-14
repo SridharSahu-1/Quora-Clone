@@ -64,7 +64,7 @@ function Home() {
                 </div>
               </div>
               
-              {Object.keys(data)
+              {Object.keys(data).reverse()
                 .map(key => {
                   return (
                       <Card id={key} key={key} />

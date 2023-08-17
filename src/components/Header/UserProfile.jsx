@@ -1,20 +1,28 @@
-import { useDispatch, useSelector } from "react-redux"
-import { Tooltip } from "react-tooltip"
-import { useNavigate } from "react-router-dom"
-import { auth } from "../../firebase"
-import { setAuth,setShowQns } from "../../redux/reducer"
-import { signOut } from "firebase/auth"
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Tooltip } from "react-tooltip";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebase";
+import { setAuth, setShowQns } from "../../redux/reducer";
+import { signOut } from "firebase/auth";
 
 const UserProfile = () => {
-  const dispatch = useDispatch()
-  const user = useSelector(state => state.auth.value)
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth.value);
+  const navigate = useNavigate();
+
   function logOut() {
     signOut(auth).then(() => {
-      dispatch(setAuth(null))
-      navigate("/login")
-    })
+      dispatch(setAuth(null));
+      navigate("/login");
+    });
   }
+
+ useEffect(() => {
+    if(!user) navigate("/login");
+  }, [user]);
+  
+
   return (
     <>
       <img
@@ -37,13 +45,13 @@ const UserProfile = () => {
       <button
         className="btn addQuestion"
         onClick={() => {
-          dispatch(setShowQns(true))
+          dispatch(setShowQns(true));
         }}
       >
         Add Questions
       </button>
     </>
-  )
-}
+  );
+};
 
-export default UserProfile
+export default UserProfile;

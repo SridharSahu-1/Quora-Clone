@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom"
-import { Plus } from "../Icons"
-import "./Styles/SideBar.css"
+import { Link } from "react-router-dom";
+import { Plus } from "../Icons";
+import "./Styles/SideBar.css";
+
 function SideBar() {
   return (
     <div className="side-bar">
@@ -98,36 +99,36 @@ function SideBar() {
         </Link>
       </div>
       <div className="lowerPanel">
-        <Link className="lowerPanel__link" to={""}>
+        <Link className="lowerPanel__link" to={"about"}>
           <span>About</span>
         </Link>
-        <Link className="lowerPanel__link" to={""}>
+        <Link className="lowerPanel__link" to={"carrers"}>
           <span>Careers</span>
         </Link>
-        <Link className="lowerPanel__link" to={""}>
+        <Link className="lowerPanel__link" to={"terms"}>
           <span>Terms</span>
         </Link>
-        <Link className="lowerPanel__link" to={""}>
+        <Link className="lowerPanel__link" to={"privacy"}>
           <span>Privacy</span>
         </Link>
-        <Link className="lowerPanel__link" to={""}>
+        <Link className="lowerPanel__link" to={"acceptable"}>
           <span>Acceptable Use</span>
         </Link>
-        <Link className="lowerPanel__link" to={""}>
+        <Link className="lowerPanel__link" to={"businesses"}>
           <span>Businesses</span>
         </Link>
-        <Link className="lowerPanel__link" to={""}>
+        <Link className="lowerPanel__link" to={"press"}>
           <span>Press</span>
         </Link>
-        <Link className="lowerPanel__link" to={""}>
+        <Link className="lowerPanel__link" to={"youradchoices"}>
           <span>Your Ad Choices</span>
         </Link>
-        <Link className="lowerPanel__link" to={""}>
+        <Link className="lowerPanel__link" to={"grievanceofficer"}>
           <span>Grievance Officer</span>
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
-export default SideBar
+export default SideBar;

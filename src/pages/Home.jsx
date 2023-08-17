@@ -1,26 +1,25 @@
-import { Await, Link, Navigate } from "react-router-dom"
-import Card from "../components/Cards/card"
-import Header from "../components/Header/Header"
-import { AskIcon, Pencil, PenIcon } from "../components/Icons"
-import SideBar from "../components/SideBar/SideBar"
-import { setShowQns } from "../redux/reducer"
-import { useDispatch, useSelector } from "react-redux"
-import "./styles/Home.css"
-import { userData } from "../firebase"
+import { Await, Link, Navigate } from "react-router-dom";
+import Card from "../components/Cards/card";
+import Header from "../components/Header/Header";
+import { AskIcon, Pencil, PenIcon } from "../components/Icons";
+import SideBar from "../components/SideBar/SideBar";
+import { setShowQns } from "../redux/reducer";
+import { useDispatch, useSelector } from "react-redux";
+import "./styles/Home.css";
+import { userData } from "../firebase";
 
 function Home() {
-
-  const [data, user] = useSelector(state => [
+  const [data, user] = useSelector((state) => [
     state.question.value.qna,
-    state.auth.value
-  ])
+    state.auth.value,
+  ]);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <Await
       resolve={() => {
-        userData(user)
+        userData(user);
       }}
     >
       {user ? (
@@ -46,7 +45,7 @@ function Home() {
                     to={""}
                     className="link-btn"
                     onClick={() => {
-                      dispatch(setShowQns(true))
+                      dispatch(setShowQns(true));
                     }}
                   >
                     <AskIcon /> Ask
@@ -59,14 +58,12 @@ function Home() {
                   </Link>
                 </div>
               </div>
-              
-              {Object.keys(data).
-                reverse()
-                .map(key => {
-                  return (
-                      <Card id={key} key={key} />
-                  )
-                })}                                       
+
+              {Object.keys(data)
+                .reverse()
+                .map((key) => {
+                  return <Card id={key} key={key} />;
+                })}
             </div>
           </div>
         </div>
@@ -74,7 +71,7 @@ function Home() {
         <Navigate to="/login" />
       )}
     </Await>
-  )
+  );
 }
 
-export default Home
+export default Home;

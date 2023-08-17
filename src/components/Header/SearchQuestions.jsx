@@ -6,6 +6,7 @@ import "./styles/searchQuestion.css"
 function SearchQuestions({ search, setSearch }) {
   const ref = useRef(null)
   const QNA = useSelector(state => state.question.value.qna)
+  
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -21,6 +22,7 @@ function SearchQuestions({ search, setSearch }) {
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [ref])
+
   return (
     <div className="search-container" ref={ref}>
       <ul className="list">
@@ -28,7 +30,7 @@ function SearchQuestions({ search, setSearch }) {
           return QNA[key].question
             .toLowerCase()
             .includes(search.toLowerCase()) &&
-            Object.hasOwn(QNA[key], "answers") &&
+            // Object.hasOwn(QNA[key], "answers") &&
             search.length ? (
             <Link className="link-text" to={`/question/${key}`} key={key}>
               <li>{QNA[key].question}</li>

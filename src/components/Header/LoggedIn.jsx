@@ -116,7 +116,7 @@ function LoggedIn({ search, setSearch }) {
             }}
           />
         </div>
-        <UserProfile />
+        <UserProfile />        
         <Tooltip
           id="answer"
           children={<p>add answers</p>}

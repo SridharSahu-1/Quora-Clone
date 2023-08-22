@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import './Styles/Error.css'
+
 function Error() {
   return (
     <div className="error__container">

@@ -1,9 +1,12 @@
-import Header from "../components/Header/Header"
-import SideBar from "../components/SideBar/SideBar"
-
-import "./styles/Following.css"
+import Header from "../components/Header/Header";
+import SideBar from "../components/SideBar/SideBar";
+import { useSelector } from "react-redux";
+import "./styles/Following.css";
+import { Navigate } from "react-router-dom";
 function Following() {
-  return (
+  const user = useSelector((state) => state.auth.value);
+
+  return user ? (
     <div className="main">
       <Header />
       <div className="body">
@@ -23,7 +26,9 @@ function Following() {
         </div>
       </div>
     </div>
-  )
+  ) : (
+    <Navigate to={"/login"} />
+  );
 }
 
-export default Following
+export default Following;

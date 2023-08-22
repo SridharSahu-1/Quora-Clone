@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound"
 import { useDispatch, useSelector } from "react-redux"
 import { setAuth } from "./redux/reducer"
 import { fetchQNAThunk } from "./redux/thunks"
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute"
 
 export default function App() {
   const [USER, data] = useSelector(state => [
@@ -24,14 +25,8 @@ export default function App() {
       dispatch(fetchQNAThunk(USER.uid))
     }
   }, [data, dispatch, USER])
-  const NotLoggedInLoader = async () => {
-    const user = await userData(USER)
-    dispatch(setAuth(user))
-    if (!user) {
-      return redirect("/login")
-    }
-    return null
-  }
+  
+
   const LoggedInLoader = async () => {
     const user = await userData(USER)
     dispatch(setAuth(user))
@@ -44,8 +39,7 @@ export default function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
-      loader: NotLoggedInLoader
+      element: <ProtectedRoute> <Home /> </ProtectedRoute>,
     },
     {
       path: "/login",
@@ -54,28 +48,23 @@ export default function App() {
     },
     {
       path: "/answer",
-      element: <Answer />,
-      loader: NotLoggedInLoader
+      element: <ProtectedRoute> <Answer /> </ProtectedRoute>,
     },
     {
       path: "/question/:id",
-      element: <Question />,
-      loader: NotLoggedInLoader
+      element: <ProtectedRoute> <Question /> </ProtectedRoute>,
     },
     {
       path: "/following",
-      element: <Following />,
-      loader: NotLoggedInLoader
+      element: <ProtectedRoute> <Following /> </ProtectedRoute>,
     },
     {
       path: "/spaces",
-      element: <ComingSoon />,
-      loader: NotLoggedInLoader  
+      element: <ProtectedRoute> <ComingSoon /> </ProtectedRoute>,
     },
     {
       path: "/notifications",
-      element: <ComingSoon />,
-      loader: NotLoggedInLoader
+      element: <ProtectedRoute> <ComingSoon /> </ProtectedRoute>,
     },
     {
       path: "*",

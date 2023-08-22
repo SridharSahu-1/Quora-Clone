@@ -1,11 +1,12 @@
-import { Await, Link, Navigate } from "react-router-dom"
-import { Logo } from "../components/Icons"
-import MiddleSection from "../components/LogIn/MiddleSection"
-import "./styles/Login.css"
-import { useSelector } from "react-redux"
-import { userData } from "../firebase"
+import { Await, Link, Navigate } from "react-router-dom";
+import { Logo } from "../components/Icons";
+import MiddleSection from "../components/LogIn/MiddleSection";
+import "./styles/Login.css";
+import { useSelector } from "react-redux";
+import { userData } from "../firebase";
+
 function LogIn() {
-  const USER = useSelector(state => state.auth.value)
+  const USER = useSelector((state) => state.auth.value);
   return (
     <Await resolve={() => userData(USER)}>
       {!USER ? (
@@ -52,7 +53,7 @@ function LogIn() {
         <Navigate to={"/"} />
       )}
     </Await>
-  )
+  );
 }
 
-export default LogIn
+export default LogIn;

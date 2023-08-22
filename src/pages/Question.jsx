@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom"
 import AnswerCard from "../components/Cards/AnswerCard"
 import AnsweredCard from "../components/Cards/AnsweredCard"
 import Header from "../components/Header/Header"
@@ -6,11 +6,16 @@ import { useSelector } from "react-redux"
 
 import "./styles/Question.css"
 import Error from "../components/Error"
+
+
 function Question() {
   const { id } = useParams()
   const question = useSelector(state => state.question.value.qna)
+  const user = useSelector((state) => state.auth.value);
+
 
   return (
+    user?
     <div className="main">
       <Header />
       {Object.keys(question).length !== 0 && Object.hasOwn(question, id) && (
@@ -34,7 +39,8 @@ function Question() {
           <Error />
         </div>
       )}
-    </div>
+    </div>:
+    <Navigate to={"/login"}/>
   )
 }
 

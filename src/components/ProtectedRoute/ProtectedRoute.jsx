@@ -20,7 +20,7 @@ export default function ProtectedRoute({children}) {
     },[auth.currentUser])
 
     if(isLoading){
-        return <div>Loading</div>
+        return <div></div>
     }
     if(!isLoggedIn){
         return <Navigate to={"/login"}/>
